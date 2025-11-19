@@ -5,7 +5,7 @@ import cors from 'cors';
 
 dotenv.config();
 
-connectToMongo();
+await connectToMongo();
 
 const app = express();
 const port = 3000;
