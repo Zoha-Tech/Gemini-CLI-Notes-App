@@ -203,10 +203,10 @@ const Dashboard = () => {
         <div className="flex-1 p-8 overflow-auto">
           <h1 className="text-3xl font-bold mb-6">Notes</h1>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
             {notes.map(note => (
               <div key={note._id} 
-                   className={`rounded-lg shadow-md p-4 flex flex-col justify-between text-black`} 
+                   className={`break-inside-avoid rounded-lg shadow-md p-4 flex flex-col justify-between text-black mb-4`} 
                    style={{ backgroundColor: note.color }}>
                 <div>
                   <h2 className="text-xl font-bold mb-2">{note.title}</h2>
@@ -218,7 +218,7 @@ const Dashboard = () => {
                     <select
                       value={note.status}
                       onChange={(e) => handleUpdateStatus(note._id, e.target.value)}
-                      className="block w-32 py-2 pl-3 pr-8 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm appearance-none cursor-pointer hover:border-gray-400 transition duration-150 ease-in-out"
+                      className="block w-32 py-2 pl-3 pr-8 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-black sm:text-sm appearance-none cursor-pointer hover:border-gray-400 transition duration-150 ease-in-out"
                     >
                       <option value="pending">Pending</option>
                       <option value="completed">Completed</option>
@@ -258,13 +258,13 @@ const Dashboard = () => {
               placeholder="Title"
               value={isEditMode ? currentNote.title : newNote.title}
               onChange={e => isEditMode ? setCurrentNote({ ...currentNote, title: e.target.value }) : setNewNote({ ...newNote, title: e.target.value })}
-              className="w-full p-3 mb-4 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300"
+              className="w-full p-3 mb-4 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-black transition duration-300"
             />
             <div className="relative w-full mb-4"> 
               <select
                 value={isEditMode ? currentNote.status : newNote.status}
                 onChange={e => isEditMode ? setCurrentNote({ ...currentNote, status: e.target.value }) : setNewNote({ ...newNote, status: e.target.value })}
-                className="w-full p-3 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300 appearance-none"
+                className="w-full bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-black transition duration-300 appearance-none"
               >
                 <option value="pending">Pending</option>
                 <option value="completed">Completed</option>
@@ -277,7 +277,7 @@ const Dashboard = () => {
               placeholder="Description"
               value={isEditMode ? currentNote.content : newNote.content}
               onChange={e => isEditMode ? setCurrentNote({ ...currentNote, content: e.target.value }) : setNewNote({ ...newNote, content: e.target.value })}
-              className="w-full p-3 mb-4 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300"
+              className="w-full p-3 mb-4 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-black transition duration-300"
             ></textarea>
             <div className="flex justify-end">
               <button

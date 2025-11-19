@@ -36,7 +36,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="max-w-sm sm:max-w-md p-8 space-y-6 bg-white/30 backdrop-blur-lg rounded-lg shadow-lg">
+      <div className="w-[90%] max-w-sm sm:max-w-md p-8 space-y-6 bg-white/30 backdrop-blur-lg rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900">Login</h2>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
@@ -52,7 +52,7 @@ const Login = () => {
               type="email"
               autoComplete="email"
               required
-              className="w-full px-3 py-2 mt-1 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300"
+              className="w-full px-3 py-2 mt-1 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-black transition duration-300"
               placeholder="you@example.com"
               value={formData.email}
               onChange={handleChange}
@@ -71,7 +71,7 @@ const Login = () => {
               type="password"
               autoComplete="current-password"
               required
-              className="w-full px-3 py-2 mt-1 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300"
+              className="w-full px-3 py-2 mt-1 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-black transition duration-300"
               placeholder="********"
               value={formData.password}
               onChange={handleChange}
