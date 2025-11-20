@@ -210,7 +210,7 @@ const Dashboard = () => {
                    style={{ backgroundColor: note.color }}>
                 <div>
                   <h2 className="text-xl font-bold mb-2">{note.title}</h2>
-                  <p className="text-gray-800">{note.content}</p>
+                  <p className="text-gray-800 break-words">{note.content}</p>
                   <p className="text-sm mt-2">Status: {note.status}</p>
                 </div>
                 <div className="flex justify-between items-center mt-4">
